@@ -22,4 +22,10 @@ function runTheClock() {
     SECONDHAND.style.transform="rotate(" + secPosition + "deg)";
 }
 
+function tickClock() {
+    var audio = new Audio('tick.mp3');
+    audio.play();
+}
+
 var interval = setInterval(runTheClock, 1000);
+var tick = setInterval(tickClock, 1000);
